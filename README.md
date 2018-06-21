@@ -14,9 +14,16 @@ kairoi every 3 second for 9 days get https://news.host.com
 kairoi every 1 second for 2 weeks post https://localhost --body={apple:true}
 > OK 0af0fcdabe1e80f042ca02e49b8a0754a39801fd
 
-kairoi every 1 day for 2 weeks put https://a.co --body=apple=true&pair=falsea --contentType=application/x-www-form-urlencoded
+kairoi every 1 day for 2 weeks put https://a.co \ 
+  --body=apple=true&pair=falsea \ 
+  --contentType=application/x-www-form-urlencoded
 > OK 79a00d44133fe4a8034821729e5e1375c4710d7c
 
+```
+
+Shut it down
+
+```shell/bash
 kairoi end 0af0fcdabe1e80f042ca02e49b8a0754a39801fd
 > OK
 
