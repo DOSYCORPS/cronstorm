@@ -10,7 +10,8 @@
     set key(key) {
       apiKey = key;
       pw.authorize(key);
-    }
+    },
+    test
   };
 
   module.exports = kairoi;
@@ -33,11 +34,15 @@
       method, url, body, contentType,
       name
     });
-    return parsePWResult(result);
+    let status = parsePWResult(result);
+    if ( status == "OK" ) {
+      status += ` ${result.timer.keyName}`;
+    }
+    return status;
   }
 
   async function end({id}={}) {
-    const result = await pw.timer.end(id); 
+    const result = await pw.timer.delete(id); 
     return parsePWResult(result);
   }
 
@@ -47,5 +52,11 @@
     } else {
       return result.error.message;
     }
+  }
+
+  async function test() {
+    kairoi.key = 'abc';
+    console.log('start',await start());
+    console.log('end', await end());
   }
 }

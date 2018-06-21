@@ -24,7 +24,7 @@
   "author": "@dosy",
   "license": "MIT",
   "dependencies": {
-    "@dosy/pocketwatch": "^1.1.13",
+    "@dosy/pocketwatch": "^1.1.15",
     "yargs": "^11.0.0"
   }
 }
