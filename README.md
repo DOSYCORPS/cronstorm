@@ -51,19 +51,19 @@ kairoi
 
 ## what kind of time?
 
-A time for GET:
+> A time for GET:
 ```shell/bash
 kairoi every 3 second for 9 days get https://news.host.com
 > OK 
 ```
 
-A time for JSON POST:
+> a time for JSON POST:
 ```shell/bash
 kairoi every 1 second for 2 weeks post https://localhost --body={apple:true}
-> OKK
+> OK
 ```
 
-A time For anything:
+> a time for anything:
 ```shell/bash
 kairoi every 1 day for 2 weeks put https://a.co \ 
   --body='apple=true&pair=false' \ 
@@ -72,7 +72,7 @@ kairoi every 1 day for 2 weeks put https://a.co \
 
 ```
 
-A time to be quiet. Shhhh:
+> and a time to be quiet. Shhhh:
 
 ```shell/bash
 kairoi end <id>
@@ -81,7 +81,7 @@ kairoi end <id>
 
 ### Show HN
 
-[Show HN: kairoi - Time-as-a-service]()
+[Show HN: kairoi - Time-as-a-Service](https://news.ycombinator.com/item?id=17367877)
 
 ### What's that?
 
