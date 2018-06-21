@@ -30,18 +30,21 @@ To try out kairoi you can use the following free API keys: `chronos` and `phanes
 
 If kairoi is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
 
-## Ensuring things happen at the right times
+## The right times
 
-Big things have small beginnings
+> Big things have small beginnings
 
-
-Everything that has a beginning  
-Has an end
 
 ```shell/bash
 kairoi every 1 second for 10 weeks post https://localhost --include={body:'apple=1'}
 > OK <id>
+```
 
+> Everything that has a beginning  
+> Has an end
+
+
+```shell/bash
 kairoi end <id>
 > OK
 ```
