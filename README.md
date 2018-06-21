@@ -1,11 +1,11 @@
 # kairoi &mdash; everything has a time
 
-Everything has a right time.
-To every thing a season. 
-With kairoi that time is now. 
-Or whenever you want it to be. 
-To the ancient Greeks, kairoi meant "the right times", or "the fated times". 
-But to you, kairoi means *"Time-as-a-Service"*.
+Everything has a right time.  
+To every thing a season.  
+With kairoi that time is now.  
+Or whenever you want it to be.  
+To the ancient Greeks, kairoi meant "the right times", or "the fated times".  
+But to you, kairoi means *"Time-as-a-Service"*.  
 
 ## Getting it
 
