@@ -14,13 +14,15 @@
   const singularize = v => v.endsWith('s') ? v.slice(0,-1) : v;
 
   const argv = require('yargs')
-    .command(['auth', '$0'], 'auth in with your API key', () => {}, argv => {
+    .command(['$0', 'auth'], 'auth in with your API key', () => {}, argv => {
       console.log(
         'To get an API key, visit this link in your browser: https://api.pocketwatch.xyz');
     })
     .command({
-      command: '$0 <method> <url> every <interval> <time> for <total> <Time>',
-      describe: 'begin making requests',
+      command: 'begin <method> <url> every <interval> <time> for <total> <Time>',
+      describe: `Example:
+        
+        kairoi begin post http://a.b every 1 seconds for 9 months`,
       handler: argv => {
         argv.interval_unit_count = argv.interval;
         argv.interval_unit_type = argv.time;
