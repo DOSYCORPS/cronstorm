@@ -17,23 +17,24 @@
   module.exports = kairoi;
 
   async function start({
-    interval_unit_type,
-    interval_unit_count,
-    duration_unit_type,
-    duration_unit_count,
+    interval,
+    intervalCount,
+    duration,
+    durationCount,
     method, url, body: body = '', contentType,
     name: name = ''
   }={}) {
     name = name + `via kairoi ${releaseVersion}`; 
-    const result = await pw.timer.create({
+    const data = {
       apiKey,
-      interval_unit_type,
-      interval_unit_count,
-      duration_unit_type,
-      duration_unit_count,
+      interval,
+      intervalCount,
+      duration,
+      durationCount,
       method, url, body, contentType,
       name
-    });
+    };
+    const result = await pw.timer.create(data);
     let status = parsePWResult(result);
     if ( status == "OK" ) {
       status += ` ${result.timer.keyName}`;

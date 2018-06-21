@@ -26,6 +26,7 @@
   "dependencies": {
     "@dosy/pocketwatch": "^1.1.15",
     "configstore": "^3.1.2",
+    "prompt": "^1.0.0",
     "yargs": "^11.0.0"
   }
 }
