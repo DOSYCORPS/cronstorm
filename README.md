@@ -7,26 +7,26 @@ Or whenever you want it to be.
 To the ancient Greeks, kairoi meant "the right times", or "the fated times".  
 But to you, kairoi means *"Time-as-a-Service"*.  
 
-## Time
+## what kind of time?
 
-For GET:
+A time for GET:
 ```shell/bash
 kairoi every 3 second for 9 days get https://news.host.com
-> OK <id>
+> OK 
 ```
 
-For JSON POST:
+A time for JSON POST:
 ```shell/bash
 kairoi every 1 second for 2 weeks post https://localhost --body={apple:true}
-> OK <id>
+> OKK
 ```
 
-For anything:
+A time For anything:
 ```shell/bash
 kairoi every 1 day for 2 weeks put https://a.co \ 
-  --body=apple=true&pair=falsea \ 
-  --contentType=application/x-www-form-urlencoded
-> OK <id>
+  --body='apple=true&pair=false' \ 
+  --contentType='application/x-www-form-urlencoded'
+> OK 
 
 ```
 
