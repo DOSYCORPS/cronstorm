@@ -1,6 +1,6 @@
 {
   "name": "kairoi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "time-as-a-service",
   "bin": {
     "kairoi": "cli.js"
