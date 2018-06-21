@@ -25,6 +25,9 @@ kairoi every 1 second for 10 weeks post https://localhost --body={"apple":1}
 kairoi end <id>
 > OK
 ```
+### What's that?
+
+[Just something from a film I liked](https://youtu.be/lrrpenD-Eg0?t=12s)
 
 ## Getting it
 
@@ -59,7 +62,8 @@ kairoi every 3 second for 9 days get https://news.host.com
 
 > a time for JSON POST:
 ```shell/bash
-kairoi every 1 second for 2 weeks post https://localhost --body={apple:true}
+kairoi every 1 second for 2 weeks post https://localhost \
+  --body={apple:true}
 > OK
 ```
 
@@ -69,7 +73,6 @@ kairoi every 1 day for 2 weeks put https://a.co \
   --body='apple=true&pair=false' \ 
   --contentType='application/x-www-form-urlencoded'
 > OK 
-
 ```
 
 > and a time to be quiet. Shhhh:
@@ -83,8 +86,5 @@ kairoi end <id>
 
 [Show HN: kairoi - Time-as-a-Service](https://news.ycombinator.com/item?id=17367877)
 
-### What's that?
-
-[Just something from a film I liked](https://youtu.be/lrrpenD-Eg0?t=12s)
 
 #### The End
