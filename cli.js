@@ -10,7 +10,7 @@
   const prompt = require('prompt');
 
   const kairoi = require('./kairoi.js');
-  const TIME_UNITS = ['second', 'minute', 'hour', 'week', 'month'];
+  const TIME_UNITS = ['second', 'minute', 'hour', 'day', 'week', 'month'];
   const METHOD = ["GET","POST","PUT","DELETE","PATCH","HEAD"];
   const singularize = v => v.endsWith('s') ? v.slice(0,-1) : v;
 
@@ -84,6 +84,17 @@
         const apiKey = argv.apiKey || cf.get('apiKey');
         kairoi.key = apiKey;
         const result = await kairoi.start(argv);
+        console.log(result);
+      }
+    })
+    .command({
+      command: 'end <id>',
+      describe: `Example:
+      kairoi end  c5a5f26b0d65d57d04748828eb4f8fb623b89daf`,
+      handler: async argv => {
+        const apiKey = argv.apiKey || cf.get('apiKey');
+        kairoi.key = apiKey;
+        const result = await kairoi.end(argv.id);
         console.log(result);
       }
     })
