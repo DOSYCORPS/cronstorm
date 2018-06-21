@@ -7,30 +7,19 @@ Or whenever you want it to be.
 To the ancient Greeks, kairoi meant "the right times", or "the fated times".  
 But to you, kairoi means *"Time-as-a-Service"*.  
 
-## what kind of time?
+## The right times
 
-A time for GET:
+> Big things have small beginnings
+
+
 ```shell/bash
-kairoi every 3 second for 9 days get https://news.host.com
-> OK 
+kairoi every 1 second for 10 weeks post https://localhost --body={"apple":1}
+> OK <id>
 ```
 
-A time for JSON POST:
-```shell/bash
-kairoi every 1 second for 2 weeks post https://localhost --body={apple:true}
-> OKK
-```
+> Everything that has a beginning  
+> Has an end
 
-A time For anything:
-```shell/bash
-kairoi every 1 day for 2 weeks put https://a.co \ 
-  --body='apple=true&pair=false' \ 
-  --contentType='application/x-www-form-urlencoded'
-> OK 
-
-```
-
-Shhhh:
 
 ```shell/bash
 kairoi end <id>
@@ -60,19 +49,30 @@ kairoi
 > OK
 ```
 
-## The right times
+## what kind of time?
 
-> Big things have small beginnings
-
-
+A time for GET:
 ```shell/bash
-kairoi every 1 second for 10 weeks post https://localhost --body={"apple":1}
-> OK <id>
+kairoi every 3 second for 9 days get https://news.host.com
+> OK 
 ```
 
-> Everything that has a beginning  
-> Has an end
+A time for JSON POST:
+```shell/bash
+kairoi every 1 second for 2 weeks post https://localhost --body={apple:true}
+> OKK
+```
 
+A time For anything:
+```shell/bash
+kairoi every 1 day for 2 weeks put https://a.co \ 
+  --body='apple=true&pair=false' \ 
+  --contentType='application/x-www-form-urlencoded'
+> OK 
+
+```
+
+A time to be quiet. Shhhh:
 
 ```shell/bash
 kairoi end <id>
@@ -87,3 +87,4 @@ kairoi end <id>
 
 [Just something from a film I liked](https://youtu.be/lrrpenD-Eg0?t=12s)
 
+#### The End
