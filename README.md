@@ -15,20 +15,20 @@ npm i -g kairoi
 
 Some people need to use `sudo` with `-g`
 
+## Free API keys
+
+To try out kairoi you can use the following free API keys: `chronos` or `phanes`
+
+If kairoi is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
+
 ## Authing In
 
 ```shell/bash
 kairoi 
-> Open this link in your browser: https://api.pocketwatch.xyz/<link to auth and buy api key>
-> Enter API key: <apiKey>
+> Open this link in your browser: https://api.pocketwatch.xyz/
+> Enter API key: 
 > OK
 ```
-
-## Free API keys
-
-To try out kairoi you can use the following free API keys: `chronos` and `phanes`
-
-If kairoi is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
 
 ## The right times
 
@@ -36,7 +36,7 @@ If kairoi is still useful to you once those quotas are exhausted, [buy a key](ht
 
 
 ```shell/bash
-kairoi every 1 second for 10 weeks post https://localhost --include={body:'apple=1'}
+kairoi every 1 second for 10 weeks post https://localhost --body={"apple":1}
 > OK <id>
 ```
 
