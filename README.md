@@ -1,8 +1,13 @@
-# kairoi - everything has a time
+# kairoi &mdash; everything has a time
 
-everything has a right time. to every thing a season. with kairoi that time is now. or whenever you want it to be. kairoi means "the right times", or "the fated times". kairoi is time-as-a-service.
+Everything has a right time.
+To every thing a season. 
+With kairoi that time is now. 
+Or whenever you want it to be. 
+To the ancient Greeks, kairoi meant "the right times", or "the fated times". 
+But to you, kairoi means *"Time-as-a-Service"*.
 
-# Getting it
+## Getting it
 
 ```shell/bash
 npm i -g kairoi 
@@ -10,7 +15,7 @@ npm i -g kairoi
 
 Some people need to use `sudo` with `-g`
 
-# Authing In
+## Authing In
 
 ```shell/bash
 kairoi 
@@ -19,13 +24,13 @@ kairoi
 OK
 ```
 
-# Free API keys
+## Free API keys
 
 To try out kairoi you can use the following free API keys: `chronos` and `phanes`
 
 If kairoi is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
 
-# Ensuring things happen at the right times
+## Ensuring things happen at the right times
 
 To begin and end::
 
@@ -37,8 +42,7 @@ kairoi end <id>
 > OK
 ```
 
-
-## Show HN
+### Show HN
 
 [Show HN: kairoi - Time-as-a-service]()
 
