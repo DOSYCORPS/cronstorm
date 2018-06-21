@@ -1,0 +1,23 @@
+{
+  "name": "kairoi",
+  "version": "1.0.0",
+  "description": "time-as-a-service",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.dosaygo.com:/home/git/kairoi"
+  },
+  "keywords": [
+    "time-as-a-service",
+    "cron",
+    "dkron",
+    "time",
+    "interval",
+    "webhook"
+  ],
+  "author": "@dosy",
+  "license": "MIT"
+}
