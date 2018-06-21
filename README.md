@@ -21,7 +21,7 @@ Some people need to use `sudo` with `-g`
 kairoi 
 > Open this link in your browser: https://api.pocketwatch.xyz/<link to auth and buy api key>
 > Enter API key: <apiKey>
-OK
+> OK
 ```
 
 ## Free API keys
@@ -32,7 +32,11 @@ If kairoi is still useful to you once those quotas are exhausted, [buy a key](ht
 
 ## Ensuring things happen at the right times
 
-To begin and end::
+Big things have small beginnings
+
+
+Everything that has a beginning  
+Has an end
 
 ```shell/bash
 kairoi every 1 second for 10 weeks post https://localhost --include={body:'apple=1'}
