@@ -2,9 +2,12 @@
   "name": "kairoi",
   "version": "1.0.0",
   "description": "time-as-a-service",
-  "main": "index.js",
+  "bin": {
+    "kairoi": "cli.js"
+  },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "patch-release": "gut && npm version patch && npm publish && gut && git push github --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,9 @@
     "webhook"
   ],
   "author": "@dosy",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@dosy/pocketwatch": "^1.1.13",
+    "yargs": "^11.0.0"
+  }
 }
