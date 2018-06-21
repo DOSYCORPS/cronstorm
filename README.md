@@ -13,7 +13,8 @@ But to you, kairoi means *"Time-as-a-Service"*.
 
 
 ```shell/bash
-kairoi every 1 second for 10 weeks post https://localhost --body={"apple":1}
+kairoi every 1 second for 10 weeks post https://localhost \
+  --body={"apple":1}
 > OK <id>
 ```
 
