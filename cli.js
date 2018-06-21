@@ -68,6 +68,11 @@
         argv.duration = argv.Time;
         const apiKey = argv.apiKey || cf.get('apiKey');
         kairoi.key = apiKey;
+        if ( !! argv.body && argv.contentType == 'application/json' ) {
+          console.log(argv);
+          argv.body = JSON.stringify(argv.body);
+          console.log(argv);
+        }
         const result = await kairoi.start(argv);
         console.log(result);
       }
@@ -132,12 +137,18 @@
     })
     .coerce('method', v => (v+'').toUpperCase())
     .choices('method', METHOD)
-    .example('every 1 seconds for 10 weeks post https://localhost')
+    .example('kairoi every 1 seconds for 10 weeks post https://localhost')
     .option('body', {
       describe: 'specify an entity request body'
     })
+    .coerce('body', v => {
+      // fix issues with JSON in the args anything that can be
+      v = new Function(`return ${v}`);
+      return v();
+    })
     .option('contentType', {
-      describe: 'specify the MIME string to be sent as Content-Type header'
+      describe: 'specify the MIME string to be sent as Content-Type header',
+      default: 'application/json'
     })
     .option('apiKey', {
       describe: 'override the saved apiKey'
