@@ -94,7 +94,7 @@
       handler: async argv => {
         const apiKey = argv.apiKey || cf.get('apiKey');
         kairoi.key = apiKey;
-        const result = await kairoi.end(argv.id);
+        const result = await kairoi.end(argv);
         console.log(result);
       }
     })
