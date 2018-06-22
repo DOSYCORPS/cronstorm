@@ -17,29 +17,29 @@
   module.exports = kairoi;
 
   async function start({
-    interval,
-    intervalCount,
-    duration,
-    durationCount,
-    method, url, body: body = '', contentType,
-    name: name = ''
-  }={}) {
-    name = name + `via kairoi ${releaseVersion}`; 
-    const data = {
-      apiKey,
       interval,
       intervalCount,
       duration,
       durationCount,
-      method, url, body, contentType,
-      name
-    };
-    const result = await pw.timer.create(data);
-    let status = parsePWResult(result);
-    if ( status == "OK" ) {
-      status += ` ${result.timer.keyName}`;
-    }
-    return status;
+      method, url, body: body = '', contentType,
+      name: name = ''
+    }={}) {
+      name = name + `via kairoi ${releaseVersion}`; 
+      const data = {
+        apiKey,
+        interval,
+        intervalCount,
+        duration,
+        durationCount,
+        method, url, body, contentType,
+        name
+      };
+      const result = await pw.timer.create(data);
+      let status = parsePWResult(result);
+      if ( status == "OK" ) {
+        status += ` ${result.timer.keyName}`;
+      }
+      return status;
   }
 
   async function end({id}={}) {
