@@ -89,19 +89,21 @@ kairoi auth
 
 > A time for GET:
 ```shell
-kairoi every 3 second for 9 days get https://news.host.com
+kairoi every 3 second for 9 days \
+  post https://news.host.com/api/rebuild-leaders
 ```
 
 > a time for JSON POST:
 ```shell
-kairoi every 1 second for 2 weeks post https://localhost \
-  --body={apple:true}
+kairoi every 1 second for 2 weeks \
+  post https://app.co/new-churners \
+  --body={action:"survey", allow:"email"}
 ```
 
 > a time for anything:
 ```shell
-kairoi every 1 day for 2 weeks put https://a.co \ 
-  --body='apple=true&pair=false' \ 
+kairoi every 1 day for 15 weeks put https://blog.me.com \ 
+  --body='reminder=homework&reminder=exercise' \ 
   --contentType='application/x-www-form-urlencoded'
 ```
 
