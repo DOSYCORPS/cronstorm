@@ -85,7 +85,12 @@ kairoi auth
 > Enter API key: 
 ```
 
-## What kind of times does kairoi support?
+# What do you support?
+
+You can specify times as second, minute, hour, day, week or month. 
+We accept get, head, post, put, patch for HTTP methods. 
+
+## What kind of times?
 
 > A time for GET:
 ```shell
