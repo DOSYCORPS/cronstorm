@@ -43,9 +43,9 @@ But to you, kairoi means *"Time-as-a-Service"*.
 > Big things have small beginnings
 
 ```shell
-kairoi every 1 second for 10 weeks \ 
-  post https://localhost \
-  --body={"apple":1}
+kairoi every 1 second for 12 weeks \ 
+  post https://app.io/new-customers \
+  --body={"action":"greet", "allow":"push,email,sms"}
 ```
 
 > Everything that has a beginning  
@@ -67,7 +67,7 @@ npm i -g kairoi
 
 Some people need to use `sudo` with `-g`
 
-## Free API keys
+## Free API keys :zap: :key: :surfer:
 
 Yep really.
 
