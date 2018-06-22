@@ -1,6 +1,6 @@
 # kairoi &mdash; opportune webhooks
 
-> "kairoi", plural of kairos (καιρός) is an Ancient Greek word meaning the right, critical, or opportune moment.
+"kairoi", plural of kairos (καιρός) is an Ancient Greek word meaning the right, critical, or opportune moment.
 
 ## When do you want to schedule webhooks?
 
