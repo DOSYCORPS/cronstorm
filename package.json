@@ -6,7 +6,6 @@
     "kairoi": "cli.js"
   },
   "scripts": {
-    "test": "node test.js",
     "patch-release": "gut && npm version patch && npm publish && gut && git push github --follow-tags"
   },
   "repository": {
