@@ -1,22 +1,23 @@
-# cronstorm CLI &mdash; scalable job scheduling as a service
+# CronStorm CLI &mdash; scalable job scheduling as a service
 
 ## When do you want to schedule webhooks?
 
-> every second? 
+Every second? 
+
 ```shell
 cronstorm every 1 second for 12 weeks PATCH https://api.example.com/ticker-price-cache
 ```
-> every month?
+
+Once a month?
+
 ```shell
 cronstorm every 1 month for 12 months post https://admin.example.com/payroll
 ```
-> one time?
+
+Just once? 
+
 ```shell
 cronstorm every 1 hour for 1 hour POST https://marketing.example.com/reply-mail
-```
-> nonsensically never?
-```shell
-cronstorm every 1 hour for 1 minute head https://example.com/dev/null
 ```
 
 ## Getting it
@@ -27,18 +28,9 @@ npm i -g cronstorm
 
 Some people need to use `sudo` with `-g`
 
-## Time-as-a-Service
-
-Everything has a right time.  
-To every thing a season.  
-With cronstorm that time is now.  
-Or whenever you want it to be.  
-To the ancient Greeks, cronstorm meant "the right times", or "the fated times".  
-But to you, cronstorm means *"Time-as-a-Service"*.  
-
 ## So when are the right times?
 
-> Big things have small beginnings
+To start a job:
 
 ```shell
 cronstorm every 1 second for 12 weeks \ 
@@ -46,28 +38,13 @@ cronstorm every 1 second for 12 weeks \
   --body={"action":"greet", "allow":"push,email,sms"}
 ```
 
-> Everything that has a beginning  
-> Has an end
-
+To stop a job:
 
 ```shell
-cronstorm end abracadabraidentifier
+cronstorm end <id>
 ```
-### What's that?
-
-[Just something from a film I liked](https://youtu.be/lrrpenD-Eg0?t=12s)
-
-## Getting it (again)
-
-```shell
-npm i -g cronstorm 
-```
-
-Some people need to use `sudo` with `-g`
 
 ## Free API keys :zap: :key: :surfer:
-
-Yep really.
 
 To try out cronstorm you can use the following free API keys: `chronos` or `phanes`
 
@@ -79,41 +56,39 @@ If you want to change the key you use, Auth in.
 
 ```shell
 cronstorm auth
-> Open this link in your browser: https://api.pocketwatch.xyz/
+> Open this link in your browser: https://cronstorm.com
 > Enter API key: 
 ```
 
 # What do you support?
 
-You can specify times as second, minute, hour, day, week or month. 
-We accept get, head, post, put, patch for HTTP methods. 
+For times cronstorm accepts second, minute, hour, day, week or month. 
 
-## What kind of times?
+For request types cronstorm accept get, head, post, put, patch.
 
-> A time for GET:
+## Supported request types
+
+GET:
+
 ```shell
 cronstorm every 3 second for 9 days \
   post https://news.host.com/api/rebuild-leaders
 ```
 
-> a time for JSON POST:
+JSON POST:
+
 ```shell
 cronstorm every 1 second for 2 weeks \
   post https://app.co/new-churners \
   --body={action:"survey", allow:"email"}
 ```
 
-> a time for anything:
+Anything:
+
 ```shell
 cronstorm every 1 day for 15 weeks put https://blog.me.com \ 
   --body='reminder=homework&reminder=exercise' \ 
   --contentType='application/x-www-form-urlencoded'
-```
-
-> and a time to be quiet. Shhhh:
-
-```shell
-cronstorm end abracadarbraidentifier
 ```
 
 ### More help
@@ -124,4 +99,3 @@ cronstorm --help
 
 ### Show HN
 
-#### The End
