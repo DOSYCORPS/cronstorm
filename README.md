@@ -1,30 +1,28 @@
-# kairoi &mdash; opportune webhooks
-
-"kairoi", plural of kairos (καιρός) is an Ancient Greek word meaning the right, critical, or opportune moment.
+# cronstorm CLI &mdash; scalable job scheduling as a service
 
 ## When do you want to schedule webhooks?
 
 > every second? 
 ```shell
-kairoi every 1 second for 12 weeks PATCH https://api.example.com/ticker-price-cache
+cronstorm every 1 second for 12 weeks PATCH https://api.example.com/ticker-price-cache
 ```
 > every month?
 ```shell
-kairoi every 1 month for 12 months post https://admin.example.com/payroll
+cronstorm every 1 month for 12 months post https://admin.example.com/payroll
 ```
 > one time?
 ```shell
-kairoi every 1 hour for 1 hour POST https://marketing.example.com/reply-mail
+cronstorm every 1 hour for 1 hour POST https://marketing.example.com/reply-mail
 ```
 > nonsensically never?
 ```shell
-kairoi every 1 hour for 1 minute head https://example.com/dev/null
+cronstorm every 1 hour for 1 minute head https://example.com/dev/null
 ```
 
 ## Getting it
 
 ```shell
-npm i -g kairoi 
+npm i -g cronstorm 
 ```
 
 Some people need to use `sudo` with `-g`
@@ -33,17 +31,17 @@ Some people need to use `sudo` with `-g`
 
 Everything has a right time.  
 To every thing a season.  
-With kairoi that time is now.  
+With cronstorm that time is now.  
 Or whenever you want it to be.  
-To the ancient Greeks, kairoi meant "the right times", or "the fated times".  
-But to you, kairoi means *"Time-as-a-Service"*.  
+To the ancient Greeks, cronstorm meant "the right times", or "the fated times".  
+But to you, cronstorm means *"Time-as-a-Service"*.  
 
 ## So when are the right times?
 
 > Big things have small beginnings
 
 ```shell
-kairoi every 1 second for 12 weeks \ 
+cronstorm every 1 second for 12 weeks \ 
   post https://app.io/new-customers \
   --body={"action":"greet", "allow":"push,email,sms"}
 ```
@@ -53,7 +51,7 @@ kairoi every 1 second for 12 weeks \
 
 
 ```shell
-kairoi end abracadabraidentifier
+cronstorm end abracadabraidentifier
 ```
 ### What's that?
 
@@ -62,7 +60,7 @@ kairoi end abracadabraidentifier
 ## Getting it (again)
 
 ```shell
-npm i -g kairoi 
+npm i -g cronstorm 
 ```
 
 Some people need to use `sudo` with `-g`
@@ -71,16 +69,16 @@ Some people need to use `sudo` with `-g`
 
 Yep really.
 
-To try out kairoi you can use the following free API keys: `chronos` or `phanes`
+To try out cronstorm you can use the following free API keys: `chronos` or `phanes`
 
-If kairoi is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
+If cronstorm is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
 
 ## Authing In
 
 If you want to change the key you use, Auth in.
 
 ```shell
-kairoi auth
+cronstorm auth
 > Open this link in your browser: https://api.pocketwatch.xyz/
 > Enter API key: 
 ```
@@ -94,20 +92,20 @@ We accept get, head, post, put, patch for HTTP methods.
 
 > A time for GET:
 ```shell
-kairoi every 3 second for 9 days \
+cronstorm every 3 second for 9 days \
   post https://news.host.com/api/rebuild-leaders
 ```
 
 > a time for JSON POST:
 ```shell
-kairoi every 1 second for 2 weeks \
+cronstorm every 1 second for 2 weeks \
   post https://app.co/new-churners \
   --body={action:"survey", allow:"email"}
 ```
 
 > a time for anything:
 ```shell
-kairoi every 1 day for 15 weeks put https://blog.me.com \ 
+cronstorm every 1 day for 15 weeks put https://blog.me.com \ 
   --body='reminder=homework&reminder=exercise' \ 
   --contentType='application/x-www-form-urlencoded'
 ```
@@ -115,17 +113,15 @@ kairoi every 1 day for 15 weeks put https://blog.me.com \
 > and a time to be quiet. Shhhh:
 
 ```shell
-kairoi end abracadarbraidentifier
+cronstorm end abracadarbraidentifier
 ```
 
 ### More help
 
 ```
-kairoi --help
+cronstorm --help
 ```
 
 ### Show HN
-
-[Show HN: kairoi - Time-as-a-Service](https://news.ycombinator.com/item?id=17367877)
 
 #### The End

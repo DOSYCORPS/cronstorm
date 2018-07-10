@@ -9,7 +9,7 @@
   const {URL} = require('url');
   const prompt = require('prompt');
 
-  const kairoi = require('./cronstorm.js');
+  const cronstorm = require('./cronstorm.js');
   const singularize = v => v.endsWith('s') ? v.slice(0,-1) : v;
   const TIME_UNITS = ['second', 'minute', 'hour', 'day', 'week', 'month'];
   const METHOD = ["GET","POST","PUT","DELETE","PATCH","HEAD"];
@@ -37,7 +37,7 @@
     .command(['$0'], 'auth in with your API key', () => {}, argv => {
       const key = cf.get('apiKey');
       if ( !! key ) {
-        console.log(`API key is set. Try "kairoi begin"`);
+        console.log(`API key is set. Try "cronstorm begin"`);
         return;
       }
       console.log(
@@ -59,46 +59,46 @@
     .command({
       command: 'begin <method> <url> every <interval> <time> for <total> <Time>',
       describe: `Example:
-        kairoi begin post http://a.b every 1 seconds for 9 months`,
+        cronstorm begin post http://a.b every 1 seconds for 9 months`,
       handler: async argv => {
         argv.intervalCount = argv.interval;
         argv.interval = argv.time;
         argv.durationCount = argv.total;
         argv.duration = argv.Time;
         const apiKey = argv.apiKey || cf.get('apiKey');
-        kairoi.key = apiKey;
+        cronstorm.key = apiKey;
         if ( !! argv.body && argv.contentType == 'application/json' ) {
           console.log(argv);
           argv.body = JSON.stringify(argv.body);
           console.log(argv);
         }
-        const result = await kairoi.start(argv);
+        const result = await cronstorm.start(argv);
         console.log(result);
       }
     })
     .command({
       command: 'every <interval> <time> for <total> <Time> <method> <url>',
       describe: `Example:
-        kairoi every 9 seconds for 5 weeks patch https://a.b`,
+        cronstorm every 9 seconds for 5 weeks patch https://a.b`,
       handler: async argv => {
         argv.intervalCount = argv.interval;
         argv.interval = argv.time;
         argv.durationCount = argv.total;
         argv.duration = argv.Time;
         const apiKey = argv.apiKey || cf.get('apiKey');
-        kairoi.key = apiKey;
-        const result = await kairoi.start(argv);
+        cronstorm.key = apiKey;
+        const result = await cronstorm.start(argv);
         console.log(result);
       }
     })
     .command({
       command: 'end <id>',
       describe: `Example:
-      kairoi end  c5a5f26b0d65d57d04748828eb4f8fb623b89daf`,
+      cronstorm end  c5a5f26b0d65d57d04748828eb4f8fb623b89daf`,
       handler: async argv => {
         const apiKey = argv.apiKey || cf.get('apiKey');
-        kairoi.key = apiKey;
-        const result = await kairoi.end(argv);
+        cronstorm.key = apiKey;
+        const result = await cronstorm.end(argv);
         console.log(result);
       }
     })
@@ -136,7 +136,7 @@
     })
     .coerce('method', v => (v+'').toUpperCase())
     .choices('method', METHOD)
-    .example('kairoi every 1 seconds for 10 weeks post https://localhost')
+    .example('cronstorm every 1 seconds for 10 weeks post https://localhost')
     .option('body', {
       describe: 'specify an entity request body'
     })
