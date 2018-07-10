@@ -1,6 +1,6 @@
 {
   "name": "cronstorm",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Scalable Job Scheduling as a Service",
   "bin": {
     "cronstorm": "cli.js"
