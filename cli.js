@@ -9,7 +9,7 @@
   const {URL} = require('url');
   const prompt = require('prompt');
 
-  const kairoi = require('./kairoi.js');
+  const kairoi = require('./cronstorm.js');
   const singularize = v => v.endsWith('s') ? v.slice(0,-1) : v;
   const TIME_UNITS = ['second', 'minute', 'hour', 'day', 'week', 'month'];
   const METHOD = ["GET","POST","PUT","DELETE","PATCH","HEAD"];

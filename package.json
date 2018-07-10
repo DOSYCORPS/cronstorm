@@ -1,24 +1,19 @@
 {
-  "name": "kairoi",
+  "name": "cronstorm",
   "version": "1.0.6",
-  "description": "time-as-a-service",
+  "description": "Scalable Job Scheduling as a Service",
   "bin": {
-    "kairoi": "cli.js"
+    "cronstorm": "cli.js"
   },
   "scripts": {
     "patch-release": "gut && npm version patch && npm publish && gut && git push github --follow-tags"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.dosaygo.com:/home/git/kairoi"
+    "url": "git@git.dosaygo.com:/home/git/cronstorm"
   },
   "keywords": [
-    "time-as-a-service",
     "cron",
-    "dkron",
-    "time",
-    "interval",
-    "webhook"
   ],
   "author": "@dosy",
   "license": "MIT",
