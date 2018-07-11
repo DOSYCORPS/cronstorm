@@ -1,5 +1,7 @@
 # CronStorm CLI &mdash; scalable job scheduling as a service
 
+Scalable job scheduling as a service.
+
 ## Examples
 
 Every second:
