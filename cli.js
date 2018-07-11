@@ -19,7 +19,7 @@
     .version(false)
     .command(['auth'], 'auth in with your API key', () => {}, argv => {
       console.log(
-        'To get an API key, visit this link in your browser: https://api.pocketwatch.xyz');
+        'To get an API key, visit this link in your browser: https://cronstorm.com');
       prompt.start();
       prompt.get([{
         name: "apiKey",
@@ -41,7 +41,7 @@
         return;
       }
       console.log(
-        'To get an API key, visit this link in your browser: https://api.pocketwatch.xyz');
+        'To get an API key, visit this link in your browser: https://cronstorm.com');
       prompt.start();
       prompt.get([{
         name: "apiKey",
