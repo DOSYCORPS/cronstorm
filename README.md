@@ -1,6 +1,6 @@
 # CronStorm CLI &mdash; scalable job scheduling as a service
 
-Scalable job scheduling as a service.
+CronStorm CLI - calable job scheduling as a service. 
 
 ## Examples
 
