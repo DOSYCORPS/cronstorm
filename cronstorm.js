@@ -1,11 +1,11 @@
 "use strict";
 {
-  const pw = require('@dosy/pocketwatch');
+  const pw = require('cronstorm-client');
   const releaseVersion = require('./package.json').version;
 
   let apiKey;
 
-  const kairoi = {
+  const cronstorm = {
     start, end,
     set key(key) {
       apiKey = key;
@@ -14,7 +14,7 @@
     test
   };
 
-  module.exports = kairoi;
+  module.exports = cronstorm;
 
   async function start({
       interval,
@@ -24,7 +24,7 @@
       method, url, body: body = '', contentType,
       name: name = ''
     }={}) {
-      name = name + `via kairoi ${releaseVersion}`; 
+      name = name + `via cronstorm ${releaseVersion}`; 
       const data = {
         apiKey,
         interval,
@@ -34,16 +34,16 @@
         method, url, body, contentType,
         name
       };
-      const result = await pw.timer.create(data);
+      const result = await pw.job.create(data);
       let status = parsePWResult(result);
       if ( status == "OK" ) {
-        status += ` ${result.timer.keyName}`;
+        status += ` ${result.job.keyName}`;
       }
       return status;
   }
 
   async function end({id}={}) {
-    const result = await pw.timer.delete(id); 
+    const result = await pw.job.delete(id); 
     return parsePWResult(result);
   }
 
@@ -56,7 +56,7 @@
   }
 
   async function test() {
-    kairoi.key = 'abc';
+    cronstorm.key = 'abc';
     console.log('start',await start());
     console.log('end', await end());
   }
