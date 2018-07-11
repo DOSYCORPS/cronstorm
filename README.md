@@ -1,23 +1,32 @@
 # CronStorm CLI &mdash; scalable job scheduling as a service
 
-## When do you want to schedule webhooks?
+## Examples
 
-Every second? 
+Every second:
 
 ```shell
-cronstorm every 1 second for 12 weeks PATCH https://api.example.com/ticker-price-cache
+cronstorm \ 
+  every 1 second \
+  for 12 weeks \ 
+  PATCH https://api.example.com/ticker-price-cache
 ```
 
-Once a month?
+Once a month:
 
 ```shell
-cronstorm every 1 month for 12 months post https://admin.example.com/payroll
+cronstorm \ 
+  every 1 month \ 
+  for 12 months \
+  post https://admin.example.com/payroll
 ```
 
-Just once? 
+Just once:
 
 ```shell
-cronstorm every 1 hour for 1 hour POST https://marketing.example.com/reply-mail
+cronstorm \
+  every 1 hour \
+  for 1 hour \
+  POST https://marketing.example.com/reply-mail
 ```
 
 ## Getting it
@@ -28,7 +37,7 @@ npm i -g cronstorm
 
 Some people need to use `sudo` with `-g`
 
-## So when are the right times?
+## More usage
 
 To start a job:
 
@@ -43,12 +52,6 @@ To stop a job:
 ```shell
 cronstorm end <id>
 ```
-
-## Free API keys :zap: :key: :surfer:
-
-To try out cronstorm you can use the following free API keys: `chronos` or `phanes`
-
-If cronstorm is still useful to you once those quotas are exhausted, [buy a key](https://api.pocketwatch.xyz).
 
 ## Authing In
 
